@@ -19,7 +19,7 @@ class Customer extends React.Component {
         const {customers} =  this.props.customers;
 
         return (
-            <div className="Customers">
+            <div className="Customers" id="home">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">

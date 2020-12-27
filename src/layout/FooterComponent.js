@@ -12,6 +12,7 @@ class FooterComponent extends Component {
     render() {
         return (
             <div>
+                <br/>
                 <footer className = "footer">
                     <p>Electronics Purchase Store &copy; copyrights 2020</p>
                 </footer>

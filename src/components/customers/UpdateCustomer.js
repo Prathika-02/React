@@ -10,9 +10,13 @@ import { connect } from "react-redux";
             identifier:"",
             name:"",
             email:"",
-            phone:""
-            
-                    
+            phone:"",
+            addressLineOne:"",
+            addressLineTwo:"",
+            city:"",
+            lState:"",
+            country:"",
+            postalCode:"",               
         }
     }
 
@@ -29,6 +33,12 @@ import { connect } from "react-redux";
             name:this.state.name,
             email:this.state.email,
             phone:this.state.phone,
+            addressLineOne:this.state.addressLineOne,
+            addressLineTwo:this.state.addressLineTwo,
+            city:this.state.city,
+            lState:this.state.lState,
+            country:this.state.country,
+            postalCode:this.state.postalCode,
         }
 
         this.props.createCustomer(newCustomer,this.props.history);
@@ -47,7 +57,13 @@ import { connect } from "react-redux";
             identifier,
             name,
             email,
-            phone         
+            phone,
+            addressLineOne,
+            addressLineTwo,
+            city,
+            lState,
+            country,
+            postalCode,        
         }=nextProps.customer;
 
         this.setState({
@@ -55,14 +71,20 @@ import { connect } from "react-redux";
             identifier,
             name,
             email,
-            phone 
+            phone,
+            addressLineOne,
+            addressLineTwo,
+            city,
+            lState,
+            country,
+            postalCode,  
                          
         });
     }
     render() {
        
         return (
-            <div className="recharge">
+            <div className="customer" id="home2">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">
@@ -109,6 +131,59 @@ import { connect } from "react-redux";
                                     placeholder="Customer Phone No"></textarea>
                                 </div>
 
+                                <div className="form-group">
+                                    <textarea 
+                                    className="form-control form-control-lg" 
+                                    name="addressLineOne"
+                                    onChange={this.onChange}
+                                    value={this.state.addressLineOne}
+                                    placeholder="Address 1"></textarea>
+                                </div>
+                                
+                                <div className="form-group">
+                                    <textarea 
+                                    className="form-control form-control-lg" 
+                                    name="addressLineTwo"
+                                    onChange={this.onChange}
+                                    value={this.state.addressLineTwo}
+                                    placeholder="Address 2"></textarea>
+                                </div>
+
+                                <div className="form-group">
+                                    <textarea 
+                                    className="form-control form-control-lg" 
+                                    name="city"
+                                    onChange={this.onChange}
+                                    value={this.state.city}
+                                    placeholder="City"></textarea>
+                                </div>
+
+                                <div className="form-group">
+                                    <textarea 
+                                    className="form-control form-control-lg" 
+                                    name="lState"
+                                    onChange={this.onChange}
+                                    value={this.state.lState}
+                                    placeholder="State"></textarea>
+                                </div>
+
+                                <div className="form-group">
+                                    <textarea 
+                                    className="form-control form-control-lg" 
+                                    name="country"
+                                    onChange={this.onChange}
+                                    value={this.state.country}
+                                    placeholder="Country"></textarea>
+                                </div>
+
+                                <div className="form-group">
+                                    <textarea 
+                                    className="form-control form-control-lg" 
+                                    name="postalCode"
+                                    onChange={this.onChange}
+                                    value={this.state.postalCode}
+                                    placeholder="Postal Code"></textarea>
+                                </div>
                                 
                                 <input type="submit" className="btn btn-primary btn-block mt-4" />
                             </form>

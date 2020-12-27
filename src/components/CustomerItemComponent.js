@@ -25,8 +25,15 @@ class CustomerItemComponent extends React.Component {
                          <h2>Customer Details</h2>
                          <p><b>Customer Name:</b>{customer.name}</p>
                          <p><b>Customer Email id:</b>{customer.email}</p>
-                         <p><b>Customer Phone No:</b>{customer.phone}
-                         </p>
+                         <p><b>Customer Phone No:</b>{customer.phone}</p>
+                         <p><b>Address LineOne:</b>{customer.addressLineOne}</p> 
+                         <p><b>Address LineTwo:</b>{customer.addressLineTwo}</p> 
+                         <p><b>City:</b>{customer.city}</p> 
+                         <p><b>State:</b>{customer.lState}</p> 
+                         <p><b>Country:</b>{customer.country}</p> 
+                         <p><b>Postal Code:</b>{customer.postalCode}</p> 
+
+                        
                      </div>
                      <div className="col-md-4 d-none d-lg-block">
                          <ul className="list-group">
